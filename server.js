@@ -204,6 +204,24 @@ app.get('/generate', async (req, res) => {
   }
 });
 
+// POST NOW
+
+app.get('/post-now', async (req, res) => {
+    try {
+      const imagePath = getNextImage();
+      const caption = 'Frase del día #SISoy #LibroViajero';
+      const success = await postToInstagram(imagePath, caption);
+      
+      if (success) {
+        res.json({ success: true, message: 'Post publicado en Instagram!' });
+      } else {
+        res.json({ success: false, message: 'Error al publicar' });
+      }
+    } catch (error) {
+      res.status(500).json({ success: false, error: error.message });
+    }
+  });
+
 // ========== CRON JOB ==========
 
 // Ejecutar todos los días a las 8:00 AM UTC
