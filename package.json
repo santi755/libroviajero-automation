@@ -1,16 +1,17 @@
 {
-    "name": "hello-world-api",
+    "name": "instagram-bot",
     "version": "1.0.0",
-    "description": "Simple Node.js API for Render",
+    "description": "Bot para generar y publicar frases en Instagram",
     "main": "server.js",
     "scripts": {
       "start": "node server.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
     "dependencies": {
-      "express": "^4.18.2"
+      "express": "^4.18.2",
+      "canvas": "^2.11.2",
+      "csv-parser": "^3.0.0",
+      "instagram-private-api": "^1.45.4",
+      "node-cron": "^3.0.3"
     },
     "engines": {
       "node": ">=18.0.0"

@@ -1,2 +1,5 @@
-node_modules
+node_modules/
 .env
+posts_generados/*.jpg
+*.log
+.DS_Store
